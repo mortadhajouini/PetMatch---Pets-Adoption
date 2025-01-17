@@ -18,6 +18,6 @@
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend**: Angular, RxJS, Bootstrap (or custom CSS)
+- **Frontend**: Angular, custom CSS
 - **Backend**: Express.js, JSON Web Tokens (JWT) for authentication
 - **Database**: MongoDB
