@@ -1,0 +1,39 @@
+<div class="adoptions-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/admin-profile">Admin Profile</a></li>
+      <li><a routerLink="/admin-add-pet">Add New Pet</a></li>
+      <li><a routerLink="/admin-petmatch-pets">PetMatch Pets</a></li>
+      <li><a routerLink="/admin-appointments-requests">Appointment Requests</a></li>
+      <li><a routerLink="/admin-adoptions-requests">Adoption Requests</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="adoptions-content">
+    <h2>Adoption Requests</h2>
+
+    <div class="adoption-requests-list">
+      <div class="adoption-request-card" *ngFor="let request of adoptionRequests">
+        <img [src]="'http://localhost:3000/'+request.petId.image" alt="{{ request.petId.name }}" class="pet-image" />
+        <div class="request-info">
+          <h3>Pet: {{ request.petId.name }}</h3>
+          <p><strong>Species:</strong> {{ request.petId.species }}</p>
+          <p><strong>Requested by:</strong> {{ request.userId.fullName }}</p>
+          <p><strong>Date:</strong> {{ request.date }}</p>
+        </div>
+        <div class="request-actions">
+          <button class="accept-btn" (click)="acceptRequest(request)">Accept</button>
+          <button class="decline-btn" (click)="declineRequest(request)">Decline</button>
+        </div>
+      </div>
+    </div>
+  </div>

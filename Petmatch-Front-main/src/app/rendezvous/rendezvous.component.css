@@ -1,0 +1,217 @@
+/* General Styling */
+.rendezvous-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fce9b5; /* Light background color for the whole page */
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+  font-family: Roboto;
+
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+  color: white;
+  position: fixed; /* Make the header fixed */
+  width: 97.57%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-left: 20px;
+}
+
+.nav-bar ul li a {
+  color: #FFF6E4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+  color: #ddd;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 25%; /* A bit wider sidebar */
+  background-color: #2b2b2b; /* Dark background color */
+  color: rgb(0, 0, 0); /* White text for contrast */
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  position: sticky;
+  top: 0;
+  margin-top: 80px;
+
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ffe2b0;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #c56d25;
+  padding-left: 15px; /* Slightly indent text on hover */
+}
+
+/* Main Content Styling */
+.rendezvous-content {
+  width: 75%; /* Adjusted width to fit next to the sidebar */
+  padding: 40px;
+  background: linear-gradient(to bottom, #fff9e6, #ffeecb); /* Subtle gradient background */
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-top: 80px; /* Space for the fixed header */
+  border-radius: 12px; /* Rounded corners for a soft look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Heading */
+.rendezvous-content h2 {
+  font-size: 2.8rem;
+  color: #c56d25; /* Accent color for the heading */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center; /* Centered heading for better focus */
+}
+
+/* New Appointment Button */
+.new-rendezvous-btn {
+  background-color: #c56d25; /* Primary color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+  display: block;
+  margin: 0 auto 40px auto; /* Center the button */
+}
+
+.new-rendezvous-btn:hover {
+  background-color: #ab8262;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Appointments List */
+.appointments-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between cards */
+}
+
+/* Individual Appointment Card */
+.appointment-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow for card pop */
+  transition: transform 0.3s, box-shadow 0.3s ease; /* Smooth hover animations */
+  text-align: center; /* Align text in the center */
+}
+
+.appointment-card:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-card h3 {
+  font-size: 1.8rem;
+  color: #c56d25; /* Accent color for titles */
+  margin-bottom: 15px;
+}
+
+.appointment-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500; /* Make text slightly bolder */
+}
+
+/* Card Button */
+.appointment-card button {
+  background-color: #c56d25;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.appointment-card button:hover {
+  background-color: #ab8262;
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* No Appointments Message */
+.rendezvous-content .no-appointments {
+  font-size: 1.5rem;
+  color: #888;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .rendezvous-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .rendezvous-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .appointments-list {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+
+  .appointment-card {
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+}

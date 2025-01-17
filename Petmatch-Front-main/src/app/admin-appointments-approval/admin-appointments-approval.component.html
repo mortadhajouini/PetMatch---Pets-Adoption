@@ -1,0 +1,43 @@
+<div class="approval-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/admin-profile">Admin Profile</a></li>
+      <li><a routerLink="/admin-add-pet">Add New Pet</a></li>
+      <li><a routerLink="/admin-petmatch-pets">PetMatch Pets</a></li>
+      <li><a routerLink="/admin-appointments-requests">Appointment Requests</a></li>
+      <li><a routerLink="/admin-adoptions-requests">Adoption Requests</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="approval-content">
+    <h2>Approve Appointment</h2>
+
+    <form (ngSubmit)="submitApproval()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" [(ngModel)]="appointmentTitle" name="title" disabled />
+      </div>
+
+      <div class="form-group">
+        <label for="approvedDate">Select Date</label>
+        <input type="date" id="approvedDate" [(ngModel)]="approvedDate" name="approvedDate" required />
+      </div>
+
+      <div class="form-group">
+        <label for="approvedTime">Select Time</label>
+        <input type="time" id="approvedTime" [(ngModel)]="approvedTime" name="approvedTime" required />
+      </div>
+
+      <button type="submit" class="approve-btn">Approve</button>
+    </form>
+  </div>
+</div>

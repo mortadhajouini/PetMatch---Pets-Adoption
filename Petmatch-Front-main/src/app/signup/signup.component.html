@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="PetMatch Logo">
+  </div>
+  <nav class="nav-bar">
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/signup">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="signup-container">
+  <div class="signup-card">
+    <h2>Create Your Account</h2>
+    <form (ngSubmit)="signIn()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="fullName" placeholder="Enter your full name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Enter your email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="Enter your password" />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password" [(ngModel)]="confirmpassword" id="confirm-password"
+          placeholder="Confirm your password" />
+      </div>
+      <button type="submit" class="signup-btn">Sign Up</button>
+      <p>Already have an account? <a routerLink="/login">Login</a></p>
+    </form>
+  </div>
+</div>

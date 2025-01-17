@@ -1,0 +1,41 @@
+<div class="rendezvous-container">
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+
+  </header>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a routerLink="/my-pets">My Pets</a></li>
+        <li><a routerLink="/rendezvous">Appointments</a></li>
+        <li ><a routerLink="/add-pet">Add New Pet</a></li>
+        <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+  
+   <!-- Main Content -->
+<div class="rendezvous-content">
+  <h2>My Appointments</h2>
+  <button class="new-rendezvous-btn" routerLink="/new-appointment">New Appointment</button>
+
+  <div class="appointments-list">
+    <div class="appointment-card">
+      <h3>My Confirmed Appointments</h3>
+      <!-- Redirect to confirmed appointments table -->
+      <button routerLink="/confirmed-appointments">View Details</button>
+    </div>
+
+    <div class="appointment-card">
+      <h3>Appointments On Hold</h3>
+      <!-- Redirect to on-hold appointments table -->
+      <button routerLink="/on-hold-appointments">View Details</button>
+    </div>
+  </div>
+</div>
+
+  

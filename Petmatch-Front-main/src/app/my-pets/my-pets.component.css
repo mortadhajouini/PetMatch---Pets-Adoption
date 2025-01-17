@@ -1,0 +1,271 @@
+/* General Styling */
+.profile-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fce9b5; /* Light background color for the whole page */
+  box-sizing: border-box;
+}
+/* Header Styling */
+.header {
+  font-family: Roboto;
+
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+  color: white;
+  position: fixed; /* Make the header fixed */
+  width: 97.57%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-left: 20px;
+}
+
+.nav-bar ul li a {
+  color: #FFF6E4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+  color: #ddd;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 25%; /* A bit wider sidebar */
+  background-color: #2b2b2b; /* Dark background color */
+  color: rgb(0, 0, 0); /* White text for contrast */
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  position: sticky;
+  top: 0;
+  margin-top: 80px;
+
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ffe2b0;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #c56d25;
+  padding-left: 15px; /* Slightly indent text on hover */
+}
+
+/* Main Content Styling */
+.profile-content {
+  width: 75%; /* Adjusted for the sidebar width */
+  padding: 40px;
+  background-color: #ffffff; /* White background for main content */
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-top: 80px;
+
+}
+
+/* Heading */
+.profile-content h2 {
+  font-size: 2.5rem;
+  color: #c56d25; /* Darker text for title */
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Pet Cards Styling */
+.pet-card {
+  background-color: #fbeecd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between; /* Aligns the content in a row */
+  align-items: center; /* Vertically centers the items */
+  gap: 15px; /* Adds space between elements */
+}
+
+.pet-card .pet-info {
+  flex: 1; /* Ensures the pet info takes up all available space */
+}
+
+.pet-card button {
+  background-color: #c56d25;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding for a more balanced look */
+  border: none;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for hover effect */
+  font-size: 1rem;
+  margin-left: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.pet-card button:hover {
+  background-color: #ab8262;
+  transform: scale(1.05); /* Slight scaling effect on hover for emphasis */
+}
+
+.pet-card button:focus {
+  outline: none; /* Removes outline on focus for a cleaner look */
+}
+
+/* Remove button (Red) Styling */
+.pet-card button.remove {
+  background-color: #e74c3c;
+}
+
+.pet-card button.remove:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .profile-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .pet-card {
+    flex-direction: column; /* Stack pet details and buttons vertically */
+  }
+
+  .pet-card .pet-info {
+    margin-bottom: 15px; /* Add space below pet info when stacking */
+  }
+
+  .pet-card button {
+    margin-left: 0; /* Remove left margin when buttons are stacked vertically */
+    margin-top: 10px; /* Add space between buttons */
+  }
+}
+
+/* Container for Pet Cards */
+.pet-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+/* Individual Pet Card */
+.pet-card {
+  background-color: #fbeecd;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pet Image */
+.pet-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #e6853c;
+}
+
+/* Pet Info Section */
+.pet-card-info {
+  padding: 15px;
+}
+
+.pet-card-info h3 {
+  font-size: 1.5rem;
+  color: #c56d25;
+  margin-bottom: 10px;
+}
+
+.pet-card-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Action Buttons */
+.pet-card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.pet-card-actions button {
+  background-color: #c56d25;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pet-card-actions button:hover {
+  background-color: #ab8262;
+  transform: scale(1.05);
+}
+
+.pet-card-actions .remove-btn {
+  background-color: #e74c3c;
+}
+
+.pet-card-actions .remove-btn:hover {
+  background-color: #c0392b;
+}
+

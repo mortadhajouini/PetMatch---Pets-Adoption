@@ -1,0 +1,56 @@
+<div class="add-pet-container">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="PetMatch Logo">
+        </div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <ul>
+            <li><a routerLink="/profile">Profile</a></li>
+            <li><a routerLink="/my-pets">My Pets</a></li>
+            <li><a routerLink="/rendezvous">Appointments</a></li>
+            <li><a routerLink="/add-pet">Add New Pet</a></li>
+            <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Section (Add Pet Form) -->
+    <div class="add-pet-content">
+        <h2>Add a New Pet</h2>
+        <form (ngSubmit)="addPet()">
+            <div class="form-group">
+                <label for="name">Pet Name</label>
+                <input type="text" id="name" [(ngModel)]="pet.name" name="name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="species">Species</label>
+                <input type="text" id="species" [(ngModel)]="pet.species" name="species" required />
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age (Years)</label>
+                <input type="number" id="age" [(ngModel)]="pet.age" name="age" required />
+            </div>
+
+            <div class="form-group">
+                <label for="specificNeeds">Specific Needs</label>
+                <input type="text" id="specificNeeds" [(ngModel)]="pet.specificNeeds" name="specificNeeds" />
+            </div>
+
+
+
+            <!-- Image Upload Field -->
+            <div class="form-group">
+                <label for="petImage">Upload Pet Image</label>
+                <input type="file" id="petImage" (change)="onImageSelected($event)" />
+            </div>
+
+            <button type="submit" class="submit-btn">Add Pet</button>
+        </form>
+    </div>
+</div>

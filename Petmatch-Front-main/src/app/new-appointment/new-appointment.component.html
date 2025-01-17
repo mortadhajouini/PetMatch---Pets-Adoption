@@ -1,0 +1,52 @@
+<div class="appointment-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/my-pets">My Pets</a></li>
+      <li><a routerLink="/rendezvous">Appointments</a></li>
+      <li><a routerLink="/add-pet">Add New Pet</a></li>
+      <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="appointment-content">
+    <h2>New Appointment</h2>
+    <form (ngSubmit)="submitForm()" class="appointment-form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" [(ngModel)]="appointment.title" name="title" placeholder="e.g., Vet Clinic Visit"
+          required />
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" [(ngModel)]="appointment.note" name="notes"
+          placeholder="Add any special notes here..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="pets">Pets</label>
+        <select name="pets" id="pets" [(ngModel)]="selectedValue" (change)="onSelectionChange($event)">
+          <option *ngFor="let pet of pets" [value]="pet._id">
+            {{ pet.name }}
+          </option>
+        </select>
+      </div>
+
+
+      <button type="submit" class="submit-btn">Request Appointment</button>
+    </form>
+  </div>
+</div>

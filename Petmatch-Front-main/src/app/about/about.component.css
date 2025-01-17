@@ -1,0 +1,248 @@
+
+
+/* General Styling */
+.about-container {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styling */
+.header {
+    font-family: Roboto;
+  
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+    color: white;
+    position: fixed; /* Make the header fixed */
+    width: 97.57%;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-bar ul li {
+    margin-left: 20px;
+  }
+  
+  .nav-bar ul li a {
+    color: #FFF6E4;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-bar ul li a:hover {
+    color: #ddd;
+  }
+
+/* About Header */
+.about-header {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+}
+
+.about-header .intro {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Mission and Values Section */
+.mission-values {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mission,
+.values {
+    width: 45%;
+}
+
+.mission h2,
+.values h2 {
+    font-size: 2rem;
+    color: #c56d25;
+    border-bottom: 2px solid #c56d25;
+    padding-bottom: 10px;
+}
+
+.mission p,
+.values ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.values ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.values ul li i {
+    margin-right: 10px;
+    color: #c56d25;
+    font-size: 1.5rem;
+}
+
+/* Team Section */
+.team {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team h2 {
+    font-size: 2rem;
+    color: #c56d25;
+    border-bottom: 2px solid #c56d25;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 22%;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    height: auto;
+    max-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    margin-top: 15px;
+    color: #c56d25;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(to right, #c56d25, #f17d24, #fe9d3d);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: #FFF6E4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #c56d25;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-social ul li {
+    margin: 0 10px;
+}
+
+.footer-social ul li a img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.footer-social ul li a:hover img {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-values {
+        flex-direction: column;
+    }
+
+    .mission,
+    .values {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .team-member {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

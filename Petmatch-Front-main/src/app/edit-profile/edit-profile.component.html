@@ -1,0 +1,42 @@
+<div class="profile-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+
+  </header>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/my-pets">My Pets</a></li>
+      <li><a routerLink="/rendezvous">Appointments</a></li>
+      <li ><a routerLink="/add-pet">Add New Pet</a></li>
+      <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="profile-content">
+    <h2>Edit Profile</h2>
+    <form (ngSubmit)="saveProfile()">
+      <div class="form-group">
+        <label for="userName">Name</label>
+        <input type="text" id="userName" [(ngModel)]="userName" name="userName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="userEmail">Email</label>
+        <input type="email" id="userEmail" [(ngModel)]="userEmail" name="userEmail" disabled="true" />
+      </div>
+
+    
+      <a routerLink="/edit-profile/change-password">
+        <button type="button">Change Password</button>
+      </a>
+      <button type="submit">Save Changes</button>
+      <button type="button" (click)="cancelEditing()">Cancel</button>
+    </form>
+  </div>
+</div>

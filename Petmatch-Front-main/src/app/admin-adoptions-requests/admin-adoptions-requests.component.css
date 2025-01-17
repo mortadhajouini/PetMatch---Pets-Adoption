@@ -1,0 +1,188 @@
+/* General Styling */
+.adoptions-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fce9b5;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 25%;
+    background-color: #2b2b2b;
+    color: #ffe2b0;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    height: calc(100vh - 80px);
+    position: sticky;
+    top: 80px;
+    margin-top: 80px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 25px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #ffe2b0;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding-left 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #c56d25;
+    padding-left: 15px;
+  }
+  
+  /* Main Content */
+  .adoptions-content {
+    width: 75%;
+    padding: 40px;
+    margin-top: 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  .adoptions-content h2 {
+    font-size: 2.8rem;
+    color: #c56d25;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  /* Adoption Request Cards */
+  .adoption-requests-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .adoption-request-card {
+    background-color: #fbeecd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .adoption-request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .request-info h3 {
+    font-size: 1.8rem;
+    color: #c56d25;
+    margin-bottom: 10px;
+  }
+  
+  .request-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .request-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  .request-actions .accept-btn {
+    background-color:#c56d25;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .request-actions .accept-btn:hover {
+    background-color: #c56d2593;
+  }
+  
+  .request-actions .decline-btn {
+    background-color: #780c00;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .request-actions .decline-btn:hover {
+    background-color: #780c00a2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .adoptions-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+      box-shadow: none;
+    }
+  
+    .adoptions-content {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .adoption-requests-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .adoption-request-card {
+      margin-bottom: 20px;
+    }
+  }
+  /* Pet Image Styling */
+.adoption-request-card .pet-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Space between image and text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

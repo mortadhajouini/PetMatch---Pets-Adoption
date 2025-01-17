@@ -1,0 +1,162 @@
+/* Header Styling */
+.header {
+  font-family: Roboto;
+
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #fca30b, #e6973c, #d89c5f);
+  color: white;
+  position: fixed; /* Make the header fixed */
+  width: 97.57%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-left: 20px;
+}
+
+.nav-bar ul li a {
+  color: #FFF6E4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+  color: #ddd;
+}
+
+/* Add a responsive design for mobile screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-bar ul li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Spacing for mobile */
+  }
+}
+
+
+/* Background with gradient */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/b3.jpg') no-repeat center center/cover;  
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Card container for login form */
+  .login-card {
+    background: rgba(255, 213, 164, 0.69); /* White background with 85% opacity */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: slide-in 0.6s ease-out;
+  }
+  
+  /* Heading style */
+  .login-card h2 {
+    margin-bottom: 20px;
+    color: #c56d25;
+    font-size: 1.8rem;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #c56d25;
+  }
+  
+  /* Login button */
+  .login-btn {
+    background-color: #c56d25;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #ab8262;
+  }
+  
+  /* Sign-up link */
+  .login-card p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .login-card a {
+    color: #c56d25;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .login-card a:hover {
+    color: #ab8262;
+  }
+  
+  /* Animation for sliding effect */
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-280px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

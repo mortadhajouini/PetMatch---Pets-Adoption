@@ -1,0 +1,40 @@
+<div class="admin-appointments-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/admin-profile">Admin Profile</a></li>
+      <li><a routerLink="/admin-add-pet">Add New Pet</a></li>
+      <li><a routerLink="/admin-petmatch-pets">PetMatch Pets</a></li>
+      <li><a routerLink="/admin-appointments-requests">Appointment Requests</a></li>
+      <li><a routerLink="/admin-adoptions-requests">Adoption Requests</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="admin-appointments-content">
+    <h2>Appointment Requests</h2>
+
+    <div class="appointment-requests-list">
+      <div class="appointment-request-card" *ngFor="let request of appointmentRequests">
+        <div class="request-info">
+          <h3>{{ request.title }}</h3>
+          <p><strong>User:</strong> {{ request.userId.fullName }}</p>
+          <p><strong>Pet:</strong> {{ request.petId.name }}</p>
+        </div>
+        <div class="request-actions">
+
+          <button class="accept-btn" (click)="acceptRequest(request)">Accept</button>
+
+          <button class="decline-btn" (click)="declineRequest(request)">Decline</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

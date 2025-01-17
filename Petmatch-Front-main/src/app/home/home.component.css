@@ -1,0 +1,354 @@
+/* General Styling */
+.home-container {
+  font-family: Roboto;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header Styling */
+.header {
+  font-family: Roboto;
+
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+  color: white;
+  position: fixed; /* Make the header fixed */
+  width: 97.57%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-left: 20px;
+}
+
+.nav-bar ul li a {
+  color: #FFF6E4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+  color: #ddd;
+}
+
+/* Add a responsive design for mobile screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-bar ul li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Spacing for mobile */
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('/assets/back10.jpg') no-repeat center center/cover;  
+  height: 700px; /* Increased height for a more impactful visual */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better contrast */
+  padding: 40px 50px; /* Increased padding for larger content area */
+  border-radius: 15px; /* Rounded corners for a smoother look */
+  max-width: 80%; /* Limit width for better readability */
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for a pop-out effect */
+}
+
+.hero-content h1 {
+  font-size: 4rem; /* Larger, more prominent heading */
+  font-weight: 700; /* Bold for emphasis */
+  margin-bottom: 20px; /* Added space between heading and subheading */
+}
+
+.hero-content p {
+  font-size: 1.8rem; /* Larger paragraph text for better readability */
+  margin-bottom: 30px; /* Added space between paragraph and call-to-action */
+}
+
+.hero-content .search-bar {
+  margin-top: 20px;
+}
+
+.hero-content .search-bar input {
+  padding: 12px;
+  font-size: 1.2rem;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.hero-content .search-bar button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #c56d25; /* Matching button with header color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-content .search-bar button:hover {
+  background-color: #a45a1f; /* Darker shade on hover */
+}
+
+
+/* Featured Services Section */
+.featured-services {
+  padding: 60px 20px; /* Generous padding for a spacious, professional layout */
+  background-color: #f4f4f4; /* Light grey background to complement the content */
+  text-align: center;
+}
+
+.featured-services h2 {
+  font-size: 2.5rem; /* Larger, more impactful heading */
+  margin-bottom: 50px;
+  font-family: Roboto, sans-serif; /* Custom font for a clean, modern look */
+  color: #c56d25; /* Dark color for the heading */
+  font-weight: 700;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 30px; /* Sufficient space between service cards */
+}
+
+.service-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+.service-card h3 {
+  font-size: 1.8rem; /* Larger title for emphasis */
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  color: #333;
+}
+
+.service-card p {
+  color: #666; /* Lighter text color for description */
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.service-card a {
+  color: #c56d25; /* Highlight color to match the header */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+  color: #ab8262; /* Slightly darker shade for hover */
+}
+
+
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 20px;
+  background-color: #e9e9e9; /* Light grey background to match the services section */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  font-family: Roboto, sans-serif;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Card zoom effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.testimonial-card span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c56d25;
+}
+
+.testimonial-card:before {
+  content: '“';
+  font-size: 3rem;
+  color: #ab8262;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.testimonial-card:after {
+  content: '”';
+  font-size: 3rem;
+  color: #ab8262;
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+}
+
+
+/* Footer Section */
+footer {
+  background: linear-gradient(to right, #c56d25, #f17d24, #fe9d3d); /* Gradient background */
+  color: white;
+  padding: 50px 20px; /* Spacious padding for a balanced layout */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers the links horizontally */
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-links ul li {
+  margin: 0 15px; /* Space between links */
+}
+
+.footer-links ul li a {
+  color: #FFF6E4; /* Light text for contrast */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #c56d25; /* Hover effect to match the primary brand color */
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-social ul li {
+  margin: 0 10px; /* Space between social icons */
+}
+
+.footer-social ul li a img {
+  width: 30px; /* Social media icons size */
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.footer-social ul li a:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #ccc; /* Lighter text for copyright notice */
+  margin-top: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+  }
+
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+
+  .footer-social ul {
+    margin-bottom: 15px;
+  }
+}

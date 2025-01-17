@@ -1,0 +1,203 @@
+/* General Styling */
+.add-pet-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fce9b5; /* Light background color for the whole page */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #c56d25, #e6853c, #d89c5f);
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 25%;
+  background-color: #2b2b2b;
+  color: #ffe2b0;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+  margin-top: 80px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ffe2b0;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #c56d25;
+  padding-left: 15px;
+}
+
+/* Main Content */
+.add-pet-content {
+  width: 75%;
+  padding: 40px;
+  margin-top: 80px;
+  background-color: #fce9b5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 80px;
+
+}
+
+.add-pet-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.add-pet-content h2 {
+  font-size: 3rem;
+  color: #c56d25;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c56d25;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #c56d25;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: #ab8262;
+  transform: scale(1.05);
+}
+
+/* Image Upload Styling */
+.form-group input[type="file"] {
+  padding: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input[type="file"]:focus {
+  border-color: #c56d25;
+}
+
+.form-group label[for="petImage"] {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-pet-container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      padding: 10px;
+      box-shadow: none;
+  }
+
+  .add-pet-content {
+      width: 100%;
+      padding: 20px;
+  }
+
+  form {
+      padding: 20px;
+      width: 90%;
+  }
+}

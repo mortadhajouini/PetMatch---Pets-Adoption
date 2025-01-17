@@ -1,0 +1,53 @@
+<div class="profile-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+
+  </header>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/my-pets">My Pets</a></li>
+      <li><a routerLink="/rendezvous">Appointments</a></li>
+      <li><a routerLink="/add-pet">Add New Pet</a></li>
+      <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="profile-content">
+    <h2>Edit Pet</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="petName">Name</label>
+        <input type="text" id="petName" [(ngModel)]="name" name="petName" required />
+      </div>
+
+      <div class="form-group">
+        <label for="petSpecies">Species</label>
+        <input type="text" id="petSpecies" [(ngModel)]="species" name="petSpecies" required />
+      </div>
+
+      <div class="form-group">
+        <label for="petAge">Age</label>
+        <input type="number" id="petAge" [(ngModel)]="age" name="petAge" required />
+      </div>
+
+      <div class="form-group">
+        <label for="petSpecificNeeds">Specific Needs</label>
+        <textarea id="petSpecificNeeds" [(ngModel)]="specificNeeds" name="petSpecificNeeds" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="petImage">Upload Pet Image</label>
+        <input type="file" id="petImage" (change)="onFileChange($event)" />
+      </div>
+
+
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="profile-container">
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="PetMatch Logo">
+    </div>
+
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <ul>
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/my-pets">My Pets</a></li>
+      <li><a routerLink="/rendezvous">Appointments</a></li>
+      <li><a routerLink="/add-pet">Add New Pet</a></li>
+      <li><a routerLink="/petmatch-pets">PetMatch Pets</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="profile-content">
+    <h2>My Pets</h2>
+
+    <!-- Liste des Animaux -->
+    <div *ngIf="pets.length > 0; else noPets" class="pet-card-container">
+      <div class="pet-card" *ngFor="let pet of pets">
+        <img [src]="'http://localhost:3000/'+pet.image" alt="{{ pet.name }}" class="pet-card-img">
+        <div class="pet-card-info">
+          <h3>{{ pet.name }}</h3>
+          <p><strong>Species:</strong> {{ pet.species }}</p>
+          <p><strong>Age:</strong> {{ pet.age }} years</p>
+          <p><strong>Specific Needs:</strong> {{ pet.specificNeeds }}</p>
+
+        </div>
+        <div class="pet-card-actions">
+          <button class="edit-btn" (click)="editPet(pet)">Edit</button>
+          <button class="remove-btn" (click)="removePet(pet)">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Pets Template -->
+    <ng-template #noPets>
+      <p>You have no pets added yet. <a routerLink="/add-pet">Add a pet now!</a></p>
+    </ng-template>
